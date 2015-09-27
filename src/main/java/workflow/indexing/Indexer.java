@@ -1,9 +1,10 @@
-package workflow;
+package workflow.indexing;
 
 import data.sentence.SentenceInserter;
 import data.sentence.SentenceSplitter;
 import data.sentence.SentenceTokenizer;
 import data.word.keyword.Keyword;
+import data.word.NullWordSingleton;
 
 import java.util.Set;
 

@@ -10,7 +10,7 @@ public class Keyword {
 
     public Keyword(String text) {
         this.text = text;
-        this.frequency = 0;
+        this.frequency = 1;
     }
 
     public String getText() {
@@ -27,5 +27,9 @@ public class Keyword {
 
     public boolean equals(Keyword other) {
         return getText().equals(other.getText());
+    }
+
+    public String toString() {
+        return "(" + text + ": " + frequency + ")";
     }
 }

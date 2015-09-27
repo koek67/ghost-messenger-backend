@@ -16,7 +16,7 @@ public class NullWord implements IWord {
 
     public NullWord(List<WordKeywordPair> wordKeywordPairs) {
         this.wordKeywordPairs = wordKeywordPairs;
-        this.frequency = 0;
+        this.frequency = 1;
     }
 
     public NullWord() {

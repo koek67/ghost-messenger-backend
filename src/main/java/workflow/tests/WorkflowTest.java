@@ -1,15 +1,11 @@
 package workflow.tests;
 
 import data.word.IWord;
-import data.word.Word;
 import data.word.keyword.Keyword;
 import data.word.successive.WordKeywordPair;
-import org.junit.Before;
-import org.junit.Test;
-import workflow.Indexer;
-import workflow.NullWordSingleton;
+import workflow.indexing.Indexer;
+import data.word.NullWordSingleton;
 
-import java.security.Key;
 import java.util.*;
 
 /**
@@ -51,10 +47,11 @@ public class WorkflowTest {
 
         while (!queue.isEmpty()) {
             IWord pop = queue.removeFirst();
-            System.out.print(pop);
+            System.out.print(pop + " " + pop.getFrequency());
 
             for (WordKeywordPair g : pop.getWordKeywordPairs()) {
                 queue.addLast(g.getWord());
+                System.out.println(g.getKeywordSet());
             }
             System.out.print('\n');
         }

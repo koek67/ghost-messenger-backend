@@ -48,9 +48,15 @@ public class WordKeywordPair {
             String tmp = keyword.getText();
 
             // see if this keyword already exists in our keywordSet
-            for (Keyword existsingKeyword : keywordSet) {
-                String existingKeywordText = existsingKeyword.getText();
+            for (Keyword existingKeyword : keywordSet) {
+                String existingKeywordText = existingKeyword.getText();
+                // if it already exists, increment this keyword's count
+                if (tmp.equals(existingKeywordText)) {
+                    existingKeyword.incrementFrequency();
+                }
             }
+            // if it does not exist, add it to the set
+            keywords.add(keyword);
         }
     }
 

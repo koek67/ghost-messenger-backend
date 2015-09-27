@@ -17,7 +17,7 @@ public class Word implements IWord {
     public Word(String text, List<WordKeywordPair> wordKeywordPairs) {
         this.text = text;
         this.wordKeywordPairs = wordKeywordPairs;
-        this.frequency = 0;
+        this.frequency = 1;
     }
 
     public Word(String text) {

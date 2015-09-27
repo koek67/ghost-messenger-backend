@@ -43,9 +43,11 @@ public class WordInserter {
             // CASE 2: newWord is not in the child words of currentWord
             //          - create and add a child word
             //          - to this child add the new keywords
+            //          - increment the frequency of currentWord
             Word wordToAdd = new Word(text);
             WordKeywordPair newWordKeywordPair = new WordKeywordPair(wordToAdd, keywordSet);
             currentWord.addWordKeyWordPair(newWordKeywordPair);
+            currentWord.incrementFrequency();
             return newWordKeywordPair.getWord();
         }
 
