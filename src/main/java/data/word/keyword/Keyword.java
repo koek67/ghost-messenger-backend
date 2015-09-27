@@ -7,7 +7,7 @@ public class Keyword {
 
     private String text;
     private int frequency;
-
+    public double norm;
     public Keyword(String text) {
         this.text = text;
         this.frequency = 1;
@@ -28,6 +28,12 @@ public class Keyword {
     public boolean equals(Keyword other) {
         return getText().equals(other.getText());
     }
+
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
+
+
 
     public String toString() {
         return "(" + text + ": " + frequency + ")";

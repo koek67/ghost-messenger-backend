@@ -12,6 +12,9 @@ public class WordKeywordPair {
 
     private Word word;
     private Set<Keyword> keywordSet;
+    public double score;
+    public double freqScore;
+    public double finalScore;
 
     public WordKeywordPair(Word word, Set<Keyword> keywordSet) {
         this.word = word;
