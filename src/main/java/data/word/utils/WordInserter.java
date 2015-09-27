@@ -26,7 +26,7 @@ public class WordInserter {
         WordKeywordPair duplicate = null;
         for (WordKeywordPair wordKeywordPair : currentWord.getWordKeywordPairs()) {
             Word word = wordKeywordPair.getWord();
-            if (word.getText().equals(text)) {
+            if (word.getText().equalsIgnoreCase(text)) {
                 duplicate = wordKeywordPair;
             }
         }

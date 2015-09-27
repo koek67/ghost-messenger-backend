@@ -21,7 +21,7 @@ public class Indexer {
     }
 
     public static void index(String message, Set<Keyword> keywordSet) {
-
+//        System.out.println("Message: " + message + "   Keywords: " + keywordSet);
         // Step 1: split text into sentences
         String[] sentences = SentenceSplitter.split(message);
 

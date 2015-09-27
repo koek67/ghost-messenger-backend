@@ -78,8 +78,10 @@ public class Conversation {
                 Response res = pair.getRes();
                 if (res == null || req == null || req.message == null || req.message == "") { continue; }
                 Set<Keyword> keys = KeywordExtractor.getKeywords(req.message);
-                System.out.println("RESPONSE " + res.responses + " " + keys);
+                //System.out.println("RESPONSE " + res.responses + " " + keys);
+
                 Indexer.index(res.responses, keys);
+                System.out.println(pair.start() + " " + req.message + " " + keys);
             }
         }
     }

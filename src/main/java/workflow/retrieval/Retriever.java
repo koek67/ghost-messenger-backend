@@ -19,7 +19,8 @@ public class Retriever {
     private static Random random = new Random();
 
     private static void walk(IWord initial, Set<Keyword> keywordsFromRequest, ArrayList<String> words) {
-
+        int randNum = random.nextInt() * 5 + 5;
+        if (randNum > words.size()) return;
         // walk through children
         for (WordKeywordPair wordKeywordPair : initial.getWordKeywordPairs()) {
 
