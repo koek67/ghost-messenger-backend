@@ -64,13 +64,14 @@ public class Parse {
         return new Conversation(messages, myName, friendName, start, end);
     }
 
-    public static void main(String[] args) {
-        File messagesFile = new File("assets/facebook-data/html/messages.htm");
+    public static Conversation learn(String filepath, String friendName) {
+        File messagesFile = new File(filepath);
         try {
             Document doc = Jsoup.parse(messagesFile, "UTF-8");
 //            Parse.getMessagesWith("Rohan Kadambi", doc);
-            Conversation convo = Parse.getMessagesWith("Rohan Kadambi", doc);
+            Conversation convo = Parse.getMessagesWith(friendName, doc);
             convo.learn();
+            return convo;
 //            Scanner s = new Scanner(System.in);
 //            String next = "";
 //            while (!next.equals("quit")) {
@@ -79,6 +80,11 @@ public class Parse {
         } catch (IOException e) {
             System.out.println("Cannot find messages file");
         }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        learn("assets/facebook-data/html/messages.htm", "Rohan Kadambi");
     }
 
 }
