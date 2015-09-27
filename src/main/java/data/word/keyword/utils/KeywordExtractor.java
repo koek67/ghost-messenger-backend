@@ -1,15 +1,8 @@
 package data.word.keyword.utils;
 
 import data.http.AzureHandler;
-import data.json.JsonDecoder;
 import data.word.keyword.Keyword;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
 
