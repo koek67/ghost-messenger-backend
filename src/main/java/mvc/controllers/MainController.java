@@ -1,15 +1,15 @@
-package hello;
+package mvc.controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
+
+import mvc.model.ResponseDAO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import parse.Conversation;
-import parse.Parse;
-import hello.Response;
+import parse.util.Parse;
 
 @RestController
-public class GreetingController {
+public class MainController {
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
@@ -20,7 +20,7 @@ public class GreetingController {
     }
 
     @RequestMapping("/response")
-    public Response greeting(@RequestParam(value="text") String name) {
-        return new Response(name);
+    public ResponseDAO greeting(@RequestParam(value="text") String name) {
+        return new ResponseDAO(name);
     }
 }

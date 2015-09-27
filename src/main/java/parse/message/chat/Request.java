@@ -1,4 +1,6 @@
-package parse;
+package parse.message.chat;
+
+import parse.message.AbstractMessage;
 
 import java.util.Date;
 
@@ -7,7 +9,7 @@ import java.util.Date;
  */
 public class Request extends AbstractMessage {
 
-    String message;
+    public String message;
 
     public Request(String message, Date time) {
         super(time);

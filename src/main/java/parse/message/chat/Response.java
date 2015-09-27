@@ -1,4 +1,6 @@
-package parse;
+package parse.message.chat;
+
+import parse.message.AbstractMessage;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +10,7 @@ import java.util.List;
  * Created by andrew on 9/26/15.
  */
 public class Response extends AbstractMessage {
-    List<String> responses;
+    public List<String> responses;
 
     public Response(List<String> responses, Date time) {
         super(time);

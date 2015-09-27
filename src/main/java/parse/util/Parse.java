@@ -1,9 +1,11 @@
-package parse;
+package parse.util;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import parse.chunk.Conversation;
+import parse.message.Message;
 
 import java.io.*;
 import java.text.ParseException;

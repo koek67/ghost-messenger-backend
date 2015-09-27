@@ -1,4 +1,5 @@
-package parse;
+package parse.message.chat;
+import parse.message.AbstractMessage;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.Date;

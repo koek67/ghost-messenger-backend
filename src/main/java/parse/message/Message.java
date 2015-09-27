@@ -1,6 +1,7 @@
-package parse;
+package parse.message;
 
-import javax.swing.*;
+import parse.message.AbstractMessage;
+
 import java.util.Date;
 
 /**
@@ -8,8 +9,8 @@ import java.util.Date;
  */
 public class Message extends AbstractMessage {
 
-    String text;
-    boolean isMe;
+    public String text;
+    public boolean isMe;
 
     public Message(String text, Date time, boolean isMe) {
         super(time);

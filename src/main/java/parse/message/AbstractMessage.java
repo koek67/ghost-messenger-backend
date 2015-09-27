@@ -1,4 +1,4 @@
-package parse;
+package parse.message;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public abstract class AbstractMessage implements Comparable<AbstractMessage>{
 
-    Date time;
+    public Date time;
 
     public AbstractMessage(Date time) {
         this.time = time;

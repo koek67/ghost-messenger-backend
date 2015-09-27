@@ -13,7 +13,7 @@ import java.net.URLEncoder;
 public class AzureHandler {
 
 
-    private static String azureKey = "QWNjb3VudEtleTp4amZWU1VHNXlmYzVrZGtUcmQxblZmbGw3UnNiakpNM3JGUE41VVA1SEZZ";
+    private static String azureKey = "base64encode('AccountKey:<key>)";
 
     public static String getRequest(String url) throws Exception {
 
@@ -29,7 +29,7 @@ public class AzureHandler {
 
         int responseCode = con.getResponseCode();
         //System.out.println("\nSending 'GET' request to URL : " + url);
-        //System.out.println("Response Code : " + responseCode);
+        //System.out.println("ResponseDAO Code : " + responseCode);
 
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(con.getInputStream()));

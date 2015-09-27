@@ -83,7 +83,7 @@ public class KeywordExtractor {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(KeywordExtractor.getKeywords("hello there my name is koushik and I am very happy today"));
+        System.out.println(KeywordExtractor.getKeywords("mvc there my name is koushik and I am very happy today"));
     }
 
 }

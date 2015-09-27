@@ -1,7 +1,12 @@
-package parse;
+package parse.chunk;
 
 import data.word.keyword.Keyword;
 import data.word.keyword.utils.KeywordExtractor;
+import parse.chunk.Chunk;
+import parse.message.Message;
+import parse.message.chat.Pair;
+import parse.message.chat.Request;
+import parse.message.chat.Response;
 import workflow.indexing.Indexer;
 
 import java.util.*;
